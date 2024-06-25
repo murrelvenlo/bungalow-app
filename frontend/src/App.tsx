@@ -4,6 +4,8 @@ import Loader from "./util/Loader";
 import DefaultLayout from "./layout/DefaultLayout";
 import PageTitle from "./components/ui/PageTitle";
 import SignIn from "./components/ui/pages/Authentication/SignIn";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -43,6 +45,7 @@ function App() {
         />
         <Route path="/auth/signup" />
       </Routes>
+      <ToastContainer />
     </DefaultLayout>
   );
 }
